@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Escolher para atualizar</title>
+    <link rel="stylesheet" href="/static/crud.css">
+</head>
+<body>
+<h1>Atualização - Escolha um cliente para atualizar</h1>
+<hr>
+<div>
+    <table class="listagem">
+        <tr>
+            <th>Identificador</th>
+            <th>Nome</th>
+            <th>Data de Nascimento</th>
+            <th>Atualizar?</th>
+        </tr>
+        {% for cliente in lista %}
+            <tr>
+                <td>{{ cliente.idt_cliente }}</td>
+                <td>{{ cliente.nme_cliente }}</td>
+                <td>
+                    {{ cliente.dta_nasc_cliente.day }} /
+                    {{ cliente.dta_nasc_cliente.month }} /
+                    {{ cliente.dta_nasc_cliente.year }}
+                </td>
+
+                <td>
+                    <button onclick="javascript:alterar({{ cliente.idt_cliente }})">Alterar</button>
+                    <button onclick="javascript:excluir({{ cliente.idt_cliente }}, '{{ cliente.nme_cliente }}')">Excluir
+                    </button>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+<br>
+[ <a href="/"> Retornar ao Menu</a> ]
+</body>
+</html>
+
+
+<script>
+
+
+    function alterar(idt) {
+        window.open("/alt_form?idt=" + idt, "_SELF");
+    }
+
+
+    function excluir(idt, nme) {
+        if (confirm("Deseja realmente excluir " + nme + "?")) {
+            window.open("/exclusao?idt=" + idt, "_SELF");
+        }
+    }
+</script>

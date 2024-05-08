@@ -1,0 +1,75 @@
+h1 {
+    color: blue;
+}
+
+
+.menu li {
+    list-style: none;
+    padding: 5px;
+}
+
+
+.menu a {
+    font-family: Verdana;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+
+.menu a:hover {
+    font-weight: bold;
+    color: white;
+    background-color: cornflowerblue;
+}
+
+
+div {
+    border: 1px solid blue;
+    padding: 10px;
+    font-family: verdana;
+    font-size: medium;
+    color: darkgrey;
+}
+
+
+input {
+    font-family: verdana;
+    font-size: medium;
+}
+
+
+td {
+    padding: 5px;
+}
+
+
+h2 {
+    color: darkgreen;
+}
+
+
+.listagem td {
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: darkgreen;
+    padding: 10px;
+    color: green;
+}
+
+
+button {
+    background-color: #007bff; /* Azul */
+    color: #fff; /* Branco */
+    font-weight: bold;
+    border: 2px solid #007bff; /* Borda azul sólida */
+    padding: 10px 20px; /* Espaçamento interno menor */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+
+button:hover {
+    background-color: #3e8e41; /* Cor de fundo verde mais escuro */
+    cursor: pointer;
+}

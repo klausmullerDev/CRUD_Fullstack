@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Inclusão</title>
+    <link rel="stylesheet" href="/static/crud.css">
+</head>
+<body>
+<h1>Inclusão - Formulário de Entrada de Dados</h1>
+<hr>
+<div>
+    <form action="/inclusao" method="post">
+        <table>
+            <tr>
+                <td>Nome:</td>
+                <td><input type="text" size="50" maxlength="50" name="nme_cliente" required></td>
+            </tr>
+            <tr>
+                <td>Data de Nascimento:</td>
+                <td><input type="date" name="dta_nasc_cliente" required></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Incluir Cliente">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+</body>
+</html>
