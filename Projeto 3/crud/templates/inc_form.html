@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Inclusão de Produto</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<h1>Inclusão - Formulário de Entrada de Dados</h1>
+<hr>
+<form action="/inclusao" method="post">
+    <table>
+        <tr>
+            <td>Nome:</td>
+            <td><input type="text" size="50" maxlength="50" name="nme_produto" required></td>
+        </tr>
+        <tr>
+            <td>Quantidade em Estoque:</td>
+            <td><input type="number" name="qtd_estoque_produto" required></td>
+        </tr>
+        <tr>
+            <td>Valor Unitário:</td>
+            <td><input type="number" step="0.01" name="vlr_produto" required></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Incluir Produto"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
