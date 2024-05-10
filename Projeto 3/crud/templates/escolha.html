@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Escolher para atualizar</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<h1>Atualização - Escolha um produto para atualizar</h1>
+<hr>
+<table>
+    <tr>
+        <th>Identificador</th>
+        <th>Nome</th>
+        <th>Quantidade em Estoque</th>
+        <th>Valor Unitário</th>
+        <th>Ações</th>
+    </tr>
+    {% for produto in lista %}
+    <tr>
+        <td>{{ produto.idt_produto }}</td>
+        <td>{{ produto.nme_produto }}</td>
+        <td>{{ produto.qtd_estoque_produto }}</td>
+        <td>{{ produto.vlr_produto }}</td>
+        <td>
+            <button onclick="alterar({{ produto.idt_produto }})">Alterar</button>
+            <button onclick="excluir({{ produto.idt_produto }}, '{{ produto.nme_produto }}')">Excluir</button>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<br>
+<a href="/">Retornar ao Menu</a>
+<script>
+function alterar(idt) {
+    window.open("/alt_form?idt=" + idt, "_SELF");
+}
+function excluir(idt, nome) {
+    if (confirm("Deseja realmente excluir " + nome + "?")) {
+        window.open("/exclusao?idt=" + idt, "_SELF");
+    }
+}
+</script>
+</body>
+</html>

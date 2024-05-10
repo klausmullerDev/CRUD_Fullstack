@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta de Produtos</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<h1>Consulta - Mostra todos os Produtos</h1>
+<hr>
+<table>
+    <tr>
+        <th>Identificador</th>
+        <th>Nome</th>
+        <th>Quantidade em Estoque</th>
+        <th>Valor Unitário</th>
+    </tr>
+    {% for produto in lista %}
+    <tr>
+        <td>{{ produto['idt_produto'] }}</td>
+        <td>{{ produto['nme_produto'] }}</td>
+        <td>{{ produto['qtd_estoque_produto'] }}</td>
+        <td>{{ produto['vlr_produto'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<br>
+<a href="/">Retornar ao Menu</a>
+</body>
+</html>
